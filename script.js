@@ -2,7 +2,6 @@ const taskInput = document.getElementById('task-input');
 const addBtn = document.getElementById('add-task-btn');
 const taskList = document.getElementById('task-list');
 
-// Load tasks from localStorage
 window.onload = () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   tasks.forEach(task => renderTask(task.text, task.completed));
